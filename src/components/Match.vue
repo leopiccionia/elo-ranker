@@ -47,16 +47,16 @@
     <div class="pairings">
       <button type="button" class="player" @click="match(1)">
         <img :src="store.image(player1)" :alt="player1">
-        <p>{{ player1 }} <span class="key">A, ⯇</span></p>
+        <p>{{ player1 }} <span class="key">A , ⯇</span></p>
       </button>
       <button type="button" class="player" @click="match(0)">
         <img :src="store.image(player2)" :alt="player2">
-        <p>{{ player2 }} <span class="key">D, ⯈</span></p>
+        <p>{{ player2 }} <span class="key">D , ⯈</span></p>
       </button>
     </div>
     <div class="buttons">
-      <button type="button" @click="match(0.5)">Empate <span class="key">S, ⯆</span></button>
-      <button type="button" @click="shuffle">Pular <span class="key">W, ⯅</span></button>
+      <button type="button" @click="match(0.5)">Empate <span class="key">S , ⯆</span></button>
+      <button type="button" @click="shuffle">Pular <span class="key">W , ⯅</span></button>
     </div>
   </Layout>
 </template>
