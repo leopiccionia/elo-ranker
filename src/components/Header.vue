@@ -26,7 +26,7 @@
   </header>
 </template>
 
-<style scoped>
+<style>
   header {
     align-items: center;
     display: flex;
@@ -47,31 +47,31 @@
     margin: 0;
   }
 
-  img {
+  header img {
     height: 2rem;
   }
 
-  ul, li {
+  header ul, header li {
     margin: 0;
     padding: 0;
   }
 
-  ul {
+  header ul {
     display: flex;
   }
 
-  li {
+  header li {
     list-style: none;
   }
 
   nav a {
     align-items: center;
     border-radius: 0.5ch;
+    color: inherit;
     display: flex;
     height: 100%;
-    color: inherit;
-    text-decoration: none;
     padding: 1ch;
+    text-decoration: none;
   }
 
   nav a.router-link-exact-active {

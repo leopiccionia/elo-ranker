@@ -45,7 +45,7 @@
 
 <template>
   <Layout>
-    <p class="announcement">Selecione sua imagem favorita:</p>
+    <p>Selecione sua imagem favorita:</p>
     <div class="pairings">
       <button type="button" class="player" @click="match(1)">
         <img :src="store.image(player1)" :alt="player1">
@@ -63,11 +63,7 @@
   </Layout>
 </template>
 
-<style scoped>
-  .announcement {
-    text-align: center;
-  }
-
+<style>
   .pairings {
     display: grid;
     gap: 1rem;
@@ -75,7 +71,7 @@
     width: 100%;
   }
 
-  button {
+  .pairings button, .buttons button {
     background: transparent;
     border: none;
     border-radius: 0.5ch;
@@ -84,7 +80,7 @@
     font-size: 1rem;
   }
 
-  button:focus, button:hover {
+  .pairings button:focus, .pairings button:hover, .buttons button:focus, .buttons button:hover {
     background-color: #DDD;
   }
 
@@ -105,7 +101,6 @@
   .player p {
     justify-content: center;
     margin: 1ch 0 0;
-    text-align: center;
   }
 
   .buttons {

@@ -35,3 +35,12 @@ body {
   padding: 1rem;
   width: 100%;
 }
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #26D;
+  text-decoration: none;
+}

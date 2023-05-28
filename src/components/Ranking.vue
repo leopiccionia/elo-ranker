@@ -40,11 +40,7 @@
   </Layout>
 </template>
 
-<style scoped>
-  p {
-    text-align: center;
-  }
-
+<style>
   table {
     border-spacing: 0;
     width: 100%;

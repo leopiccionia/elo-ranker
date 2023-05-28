@@ -20,14 +20,8 @@
   </footer>
 </template>
 
-<style scoped>
+<style>
   footer p {
     margin: 0;
-    text-align: center;
-  }
-
-  footer a {
-    color: #26D;
-    text-decoration: none;
   }
 </style>

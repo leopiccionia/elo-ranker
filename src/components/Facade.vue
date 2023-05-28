@@ -22,7 +22,7 @@
 
 <template>
   <Header title="Boas vindas"/>
-  <main>
+  <main class="facade">
     <p>Selecione um arquivo para começar, ou
       <a download href="https://raw.githubusercontent.com/leopiccionia/elo-ranker/main/demos/estados-br.ini" target="_blank">baixe o arquivo de demonstração</a>.
     </p>
@@ -30,15 +30,15 @@
   </main>
 </template>
 
-<style scoped>
-  main {
+<style>
+  .facade {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  button {
+  .facade button {
     background-color: #DDD;
     border: 2px dashed #555;
     border-radius: 0.5rem;
@@ -50,10 +50,5 @@
     padding: 2rem;
     transition: border-color 0.25s;
     width: 100%;
-  }
-
-  a {
-    color: #26D;
-    text-decoration: none;
   }
 </style>
