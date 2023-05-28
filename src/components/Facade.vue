@@ -23,7 +23,7 @@
   <Header title="Boas vindas"/>
   <main>
     <p>Selecione um arquivo para começar, ou
-      <a download href="https://raw.githubusercontent.com/leopiccionia/elo-ranker/demos/estados-br.toml" target="_blank">baixe o arquivo de demonstração</a>.
+      <a download href="https://raw.githubusercontent.com/leopiccionia/elo-ranker/main/demos/estados-br.toml" target="_blank">baixe o arquivo de demonstração</a>.
     </p>
     <button type="button" @click="open()">Escolha um arquivo</button>
   </main>
