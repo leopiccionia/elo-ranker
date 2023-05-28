@@ -19,9 +19,11 @@
   }
 
   const match = (score: number) => {
-    const [newP1, newP2] = adjustRatings(store.rank!.players[player1.value] ?? INITIAL_ELO, store.rank!.players[player2.value] ?? INITIAL_ELO, score)
-    store.rank!.players[player1.value] = newP1
-    store.rank!.players[player2.value] = newP2
+    const rank = store.rank!
+    const [newP1, newP2] = adjustRatings(rank!.players[player1.value] ?? INITIAL_ELO, rank!.players[player2.value] ?? INITIAL_ELO, score)
+    rank!.players[player1.value] = newP1
+    rank!.players[player2.value] = newP2
+    rank!.count += 1
     shuffle()
   }
 

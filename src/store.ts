@@ -17,6 +17,7 @@ export const useStore = defineStore('elo', () => {
         rank.value = maybeRank as Rank
       } else {
         rank.value = {
+          count: 0,
           players: Object.fromEntries(Object.keys(newSetup.players).map((player) => [player, INITIAL_ELO])),
         }
       }

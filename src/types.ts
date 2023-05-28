@@ -1,4 +1,5 @@
 export interface Rank {
+  count: number
   players: Record<string, number>
 }
 

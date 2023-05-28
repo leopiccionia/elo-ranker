@@ -11,11 +11,12 @@
     return Object.keys(store.rank!.players).sort((a, b) => Math.sign(elos[b] - elos[a]))
   })
 
-  const numberFormatter = new Intl.NumberFormat('pt-br', { maximumFractionDigits: 2 })
+  const numberFormatter = new Intl.NumberFormat('pt-br', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
 </script>
 
 <template>
   <Layout>
+    <p>Ranking após <strong>{{ store.rank!.count }}</strong> confrontos:</p>
     <table>
       <thead>
         <tr>
@@ -40,6 +41,10 @@
 </template>
 
 <style scoped>
+  p {
+    text-align: center;
+  }
+
   table {
     border-spacing: 0;
     width: 100%;
