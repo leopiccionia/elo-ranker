@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { useFileDialog } from '@vueuse/core'
-  import { useRouter } from 'vue-router'
+  import { RouterLink, useRouter } from 'vue-router'
 
   import Header from './Header.vue'
   import { useStore } from '../store'
@@ -21,9 +21,7 @@
 <template>
   <Header title="Boas vindas"/>
   <main class="facade">
-    <p>Selecione um arquivo para começar, ou
-      <a download href="https://raw.githubusercontent.com/leopiccionia/elo-ranker/main/demos/estados-br.ini" target="_blank">baixe o arquivo de demonstração</a>.
-    </p>
+    <p>Selecione um arquivo para começar, ou <RouterLink :to="{ name: 'demo:estados-br' }">vá para uma demonstração</RouterLink>.</p>
     <button type="button" @click="open()">Escolha um arquivo</button>
   </main>
 </template>
