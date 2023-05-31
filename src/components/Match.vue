@@ -65,6 +65,7 @@
 
 <style>
   .pairings {
+    align-items: baseline;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -125,5 +126,12 @@
     font-weight: bold;
     justify-content: center;
     padding: 0.25rem;
+  }
+
+  @media (pointer: none), (pointer: coarse) {
+
+    .key {
+      display: none;
+    }
   }
 </style>
