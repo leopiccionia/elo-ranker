@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 
 import type { Rank, Setup } from './types'
-import { INITIAL_ELO } from './utils/elo'
+import { createRank } from './utils/setup'
 
 export const useStore = defineStore('elo', () => {
   const rank = ref<Rank | null>(null)
@@ -13,14 +13,7 @@ export const useStore = defineStore('elo', () => {
   watch(setup, (newSetup) => {
     if (newSetup) {
       const maybeRank = JSON.parse(localStorage.getItem(`elo:${newSetup.id}`) ?? 'null')
-      if (maybeRank) {
-        rank.value = maybeRank as Rank
-      } else {
-        rank.value = {
-          count: 0,
-          players: Object.fromEntries(Object.keys(newSetup.players).map((player) => [player, INITIAL_ELO])),
-        }
-      }
+      rank.value = maybeRank ? (maybeRank as Rank) : createRank(newSetup)
     } else {
       rank.value = null
     }

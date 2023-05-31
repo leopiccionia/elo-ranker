@@ -1,11 +1,10 @@
 <script setup lang="ts">
   import { useFileDialog } from '@vueuse/core'
-  import { parse } from 'ini'
   import { useRouter } from 'vue-router'
 
   import Header from './Header.vue'
   import { useStore } from '../store'
-  import type { Setup } from '../types'
+  import { parseSetup } from '../utils/setup'
 
   const { onChange, open } = useFileDialog({ accept: '.ini', multiple: false })
   const router = useRouter()
@@ -13,8 +12,7 @@
 
   onChange(async (files) => {
     if (files) {
-      const file = files.item(0)!
-      store.setup = parse(await file.text()) as Setup
+      store.setup = await parseSetup(files.item(0)!)
       router.replace({ name: 'match' })
     }
   })
