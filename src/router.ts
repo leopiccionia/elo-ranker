@@ -18,6 +18,7 @@ const router = createRouter({
     { name: 'match', path: '/match', component: Match },
     { name: 'ranking', path: '/ranking', component: Ranking },
     ...Object.keys(demos).map((demo) => ({ name: `demo:${demo}`, path: `/demo/${demo}`, component: Match, meta: { demo } })),
+    { name: '404', path: '/:catchAll(.*)', redirect: '/facade' },
   ],
 })
 
