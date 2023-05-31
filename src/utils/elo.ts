@@ -1,4 +1,4 @@
-export const INITIAL_ELO = 400
+export const INITIAL_ELO = 1000
 
 function expectedScores (Ra: number, Rb: number): [number, number] {
   const Qa = 10 ** (Ra / INITIAL_ELO)
