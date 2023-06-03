@@ -90,7 +90,7 @@
   }
 
   .player img {
-    width: 100%;
+    max-width: 100%;
   }
 
   .player p, .buttons button {
