@@ -48,6 +48,7 @@
 
   table img {
     max-width: 15rem;
+    width: 100%;
   }
 
   th, td {
